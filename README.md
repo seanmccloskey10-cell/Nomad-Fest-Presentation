@@ -97,3 +97,15 @@ Full prompts and key elements checklist: `lesson/PROMPTS.md`
 - [ ] `backup/smash-club-branded.html` ready in a background tab
 - [ ] Whispr Flow running for voice input
 - [ ] Wi-Fi tested — or hotspot ready as fallback
+
+---
+
+## Emergency Recovery
+
+If the demo breaks and you need the finished site instantly:
+
+```bash
+git checkout solution -- index.html
+```
+
+Then open `index.html` in the browser. Done.
