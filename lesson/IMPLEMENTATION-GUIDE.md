@@ -22,13 +22,15 @@ The contrast is the lesson. Do not make Prompt 1 too polished.
 7. **Footer** — venue address, Da Nang Vietnam.
 
 ### Style rules for Prompt 1
-- `background: #050e18` (dark navy)
+- `background: #050e18` (dark navy) — the ONLY background color
+- **Two colors only: navy + white.** No orange, no green, no accent colors anywhere
 - System fonts only — no Google Fonts
-- White and grey text, one accent color max (`#f97316` orange for CTA button only)
+- White text at varying opacity for hierarchy (headings 100%, body 65%, labels 45%)
+- CTA buttons: white background + navy text (primary), white border (secondary)
 - No hover effects, no transitions, no animations
-- No colored skill badges — just plain text labels
+- No colored skill badges — just plain muted text labels
 - No emoji flags in the leaderboard
-- "Polished template" — not "premium product"
+- "Competent template" — not "premium product." The wow is speed, not design.
 
 ### What Prompt 1 must NOT have
 - Google Fonts
