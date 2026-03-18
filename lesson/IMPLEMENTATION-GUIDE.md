@@ -47,17 +47,13 @@ Nomad Fest audience — expats, digital nomads. A pickleball court in Da Nang is
 
 ## Prompt 2 — Full Brand Transformation
 
-### How the demo works (no pre-seeding needed)
+### How the demo works
 
 The demo starts with **no index.html** — `rm -f index.html` before each run. Claude creates it from scratch:
 - Prompt 1 → Claude writes the entire plain site
-- Prompt 2 → Claude reads `lesson/PROMPT2-CODE-REFERENCE.md` and transforms it
+- Prompt 2 → `/website-designer` skill applies the full visual system; brand name + pong game are added on top
 
-The reference file contains pre-tested implementations for every complex component. No dormant scaffolding needed.
-
-**Still pre-seeded in the CSS (for reliability):**
-- `@keyframes fade-slide-up` and `@keyframes pulse-glow` — these are harmless to have in Prompt 1 output
-- `initReveal()` — scroll-reveal function, called on DOMContentLoaded
+The `/website-designer` skill reads `website-designer/SKILL.md`. The pong game comes from `lesson/PROMPT2-CODE-REFERENCE.md`. No dormant scaffolding needed.
 
 ### What Claude invents (brand identity):
 - A name that feels like a premium sports community
@@ -160,22 +156,22 @@ Open the HTML file. The transformation should be immediately obvious above the f
 | Typography | Low | Simple Google Fonts import + CSS variables |
 | Glassmorphism | Low | 3-line backdrop-filter rule |
 
-### The Reference File Strategy
+### The Reference File + Skill Strategy
 
-`lesson/PROMPT2-CODE-REFERENCE.md` contains pre-tested, working implementations of all complex components. **Include this in your Prompt 2 instruction:**
+**`/website-designer` skill** (`website-designer/SKILL.md`) handles the full visual system — typography, gradient, glassmorphism, marquee, hover polish, scroll-reveal. No need to specify these in the prompt.
 
-> "Before writing any code, read `lesson/PROMPT2-CODE-REFERENCE.md` and use the implementations there for the game, marquee, and animated gradient — don't write these from scratch."
+**`lesson/PROMPT2-CODE-REFERENCE.md`** contains the pre-tested pong game (~250 lines) and marquee HTML. The skill alone won't write the game — the prompt must tell Claude to get it from the reference file.
 
-This drops Prompt 2 build time from ~5-8 minutes to ~2-3 minutes. Claude integrates proven code rather than reinventing complex JS.
+Together these drop Prompt 2 build time from ~5-8 minutes to ~2-3 minutes.
 
 ### Time Budget (20-minute workshop)
 - 0:00 — Intro + context (2 min)
 - 2:00 — Prompt 1 typed + running (1 min to type, ~2 min to build)
 - 5:00 — Prompt 1 result shown, react with audience (1 min)
-- 6:00 — Enable Plan Mode, Prompt 2 typed (1 min to type)
-- 7:00 — Claude plans (1-2 min visible reasoning)
-- 9:00 — Claude builds Prompt 2 (~3 min with reference file)
-- 12:00 — Open result, do live demo moves (3 min)
+- 6:00 — Prompt 2 typed (`/website-designer` + brand + pong game) — 1 min to type
+- 7:00 — Claude builds Prompt 2 (~3 min with `/website-designer` skill + reference file)
+- 10:00 — Open result, do live demo moves (3 min)
+- 13:00 — Explain the skill concept to audience (2 min)
 - 15:00 — Q&A / takeaways (5 min)
 
 ### Fallback Options (if something breaks)
