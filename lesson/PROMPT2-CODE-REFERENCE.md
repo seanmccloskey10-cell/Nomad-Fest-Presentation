@@ -33,7 +33,7 @@ Apply directly to `.hero` — no extra elements needed:
 .hero {
   background: linear-gradient(-45deg, #f4511e, #f9a825, #e91e8c, #9c27b0, #0ea5e9, #f4511e);
   background-size: 500% 500%;
-  animation: gradient-shift 18s ease infinite;
+  animation: gradient-shift 35s ease infinite;
 }
 
 @keyframes gradient-shift {
@@ -130,7 +130,7 @@ const resultsRow = document.getElementById('resultsRow');
 
 let W, H;
 const PADDLE_W = 12, PADDLE_H = 64, BALL_R = 9;
-const BASE_SPEED = 22;
+const BASE_SPEED = 7;
 
 let running = false, animId = null;
 let ballX, ballY, ballDX, ballDY;
@@ -186,7 +186,7 @@ function update() {
   if (!running) return;
   playerY = Math.max(0, Math.min(H - PADDLE_H, mouseY));
   const aiCenter = aiY + PADDLE_H / 2;
-  const aiSpeed = 14;
+  const aiSpeed = 5;
   if (ballY > aiCenter + 6) aiY = Math.min(H - PADDLE_H, aiY + aiSpeed);
   if (ballY < aiCenter - 6) aiY = Math.max(0, aiY - aiSpeed);
   ballX += ballDX; ballY += ballDY;

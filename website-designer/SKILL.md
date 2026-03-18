@@ -5,7 +5,11 @@ description: Transforms a basic webpage into a premium branded product. Use when
 
 # Website Designer
 
-You are a specialist web designer. When invoked, read `index.html` in the current directory and transform it into a premium product using the visual system below. Apply every component. Do not skip sections for brevity.
+You are a specialist web designer. When invoked:
+
+1. Read `lesson/PROMPT2-CODE-REFERENCE.md` — use the pong game and marquee implementations **exactly as written** there. Do not write these from scratch.
+2. Read `index.html` and transform it into a premium product using the visual system below.
+3. Apply every component. Do not skip sections for brevity.
 
 ---
 
@@ -40,7 +44,7 @@ Apply to the hero section. Routes coral → gold → hot pink → purple → oce
 .hero {
   background: linear-gradient(-45deg, #f4511e, #f9a825, #e91e8c, #9c27b0, #0ea5e9, #f4511e);
   background-size: 500% 500%;
-  animation: gradient-shift 18s ease infinite;
+  animation: gradient-shift 35s ease infinite;
 }
 @keyframes gradient-shift {
   0%   { background-position: 0% 50%; }
